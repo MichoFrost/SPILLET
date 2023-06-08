@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>"4xM" = Micho's Martian Meteorite Masher</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/game.css" />
+  <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="navigation_list">
+        <li class="navigation_item"><a class="navigation_link" href="index.html">Forside</a></li>
+        <li class="navigation_item"><a class="navigation_link" href="spil.html">Spil</a></li>
+        <li class="navigation_item"><a class="navigation_link" href="subpages/ide.html">Idé</a></li>
+        <li class="navigation_item"><a class="navigation_link" href="subpages/teknik.html">Teknik</a></li>
+        <li class="navigation_item"><a class="navigation_link" href="subpages/grafik.html">Grafik</a></li>
+        <li class="navigation_item"><a class="navigation_link" href="subpages/assets.html">Assets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <audio src="assets/AUDIO/explosion1.wav" id="explosion"></audio>
+
+    <div id="screen">
+      <div id="game">
+        <div id="game_background"></div>
+        <div id="game_elements">
+          <!--METEORERNE-->
+          <div id="meteorite_container" class="meteorite_container">
+            <div id="meteorite" data-meteorite="meteorite"></div>
+          </div>
+          <div id="meteorite_small_container" class="meteorite_container">
+            <div id="meteorite_small" data-meteorite="meteorite"></div>
+          </div>
+          <div id="meteorite_big_container" class="meteorite_container">
+            <div id="meteorite_big" data-meteorite="meteorite"></div>
+          </div>
+
+          <!--RUMSKIBET-->
+          <div id="spaceship_container" class="float">
+            <div id="spaceship"></div>
+            <div id="reloadBtn" class="hide">
+              <p>RELOAD!</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="game_foreground"></div> -->
+
+        <div id="game_ui">
+          <div id="score_board">
+            <span id="myPoints" class="blink3"></span>
+          </div>
+          <div id="ammo_board">
+            <span id="myAmmo" class=""></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="start_game" class="">
+        <div id="play_btn" class="blink1">
+          <p>Start</p>
+        </div>
+        <div id="info_btn">Sådan spiller du spillet</div>
+        <div id="start_text_container">
+          <p class="start_text">Åh nej! Meteorerne kommer!</p>
+          <p class="start_text">
+            Skynd dig at skyde dem ned med dit rumskib!
+          </p>
+        </div>
+      </div>
+      <div id="game_over" class="hide">
+        <div class="play_again_btn game_over_btn blink2">
+          <p>Prøv igen</p>
+        </div>
+      </div>
+      <div id="game_complete" class="hide">
+        <div class="play_again_btn game_complete_btn blink3">
+          <p>Spil igen</p>
+        </div>
+      </div>
+
+      <div id="info_screen" class="hide">
+        <div id="close_info_btn">Tilbage til start</div>
+        <div id="textBox">
+          <p class="info_text">Klik på meteorerne, for at skyde dem ned</p>
+          <img src="assets/svg/meteorite.svg" id="info_meteorite">
+          <p class="info_text">MEN - du har kun 5 missiler!</p>
+          <img src="assets/svg/missile.svg" id="info_missile">
+          <p class="info_text">Klik på rumskibet for at lade missiler</p>
+          <img src="assets/svg/spaceship.svg" id="info_spaceship">
+          <p class="info_text">Ét klik lader rumskibet med ét missil - så du skal klikke på rumskibet mange gange, når
+            du
+            skal lade</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+  <script src="js/game.js"></script>
+</body>
+
+</html>
